@@ -1,0 +1,63 @@
+# Environment
+.env
+.env.local
+.env.production
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# FAISS index — large binary, rebuild locally with pipeline/indexer.py
+data/faiss_index/
+*.index
+*.pkl
+
+# Sample code data — add your own
+data/sample_code/
+
+# Generated tests
+tests/generated_tests.py
+
+# Streamlit
+.streamlit/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# HuggingFace cache
+.cache/

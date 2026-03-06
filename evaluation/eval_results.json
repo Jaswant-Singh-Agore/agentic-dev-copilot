@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-03-07T03:12:06.861176",
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "provider": "novita",
+  "agents": [
+    {
+      "agent": "LogAnalyzerAgent",
+      "cases": [
+        {
+          "case_id": "log_01",
+          "description": "ZeroDivisionError in divide function",
+          "scores": {
+            "error_type_correct": 1,
+            "line_number_correct": 0,
+            "root_cause_present": 1,
+            "root_cause_length_score": 1.0,
+            "confidence_valid": 1,
+            "overall": 0.8
+          },
+          "latency_s": 7.44
+        },
+        {
+          "case_id": "log_02",
+          "description": "KeyError in dictionary access",
+          "scores": {
+            "error_type_correct": 1,
+            "line_number_correct": 1,
+            "root_cause_present": 1,
+            "root_cause_length_score": 1.0,
+            "confidence_valid": 1,
+            "overall": 1.0
+          },
+          "latency_s": 5.44
+        },
+        {
+          "case_id": "log_03",
+          "description": "AttributeError on None object",
+          "scores": {
+            "error_type_correct": 1,
+            "line_number_correct": 1,
+            "root_cause_present": 1,
+            "root_cause_length_score": 1.0,
+            "confidence_valid": 1,
+            "overall": 1.0
+          },
+          "latency_s": 4.57
+        }
+      ],
+      "avg_score": 0.933
+    },
+    {
+      "agent": "CodeFixerAgent",
+      "cases": [
+        {
+          "case_id": "fix_01",
+          "description": "Fix ZeroDivisionError",
+          "scores": {
+            "fix_present": 1,
+            "keywords_present": 1.0,
+            "explanation_present": 1,
+            "confidence_valid": 1,
+            "review_quality_valid": 1,
+            "overall": 1.0
+          },
+          "latency_s": 5.77
+        },
+        {
+          "case_id": "fix_02",
+          "description": "Fix missing return statement",
+          "scores": {
+            "fix_present": 1,
+            "keywords_present": 0.0,
+            "explanation_present": 1,
+            "confidence_valid": 1,
+            "review_quality_valid": 1,
+            "overall": 0.75
+          },
+          "latency_s": 30.06
+        }
+      ],
+      "avg_score": 0.875
+    },
+    {
+      "agent": "TestGeneratorAgent",
+      "cases": [
+        {
+          "case_id": "test_01",
+          "description": "Generate tests for calculator functions",
+          "scores": {
+            "tests_present": 1,
+            "min_tests_met": 1,
+            "function_detection_score": 1.0,
+            "pytest_pattern_score": 1.0,
+            "coverage_notes_present": 1,
+            "overall": 1.0
+          },
+          "latency_s": 3.35
+        },
+        {
+          "case_id": "test_02",
+          "description": "Generate tests for a class",
+          "scores": {
+            "tests_present": 1,
+            "min_tests_met": 0,
+            "function_detection_score": 1.0,
+            "pytest_pattern_score": 1.0,
+            "coverage_notes_present": 1,
+            "overall": 0.8
+          },
+          "latency_s": 3.21
+        }
+      ],
+      "avg_score": 0.9
+    }
+  ],
+  "summary": {
+    "LogAnalyzerAgent": 0.933,
+    "CodeFixerAgent": 0.875,
+    "TestGeneratorAgent": 0.9
+  }
+}
