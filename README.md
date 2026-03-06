@@ -2,7 +2,7 @@
 
 A multi-agent system that analyzes Python error logs, suggests fixes, and generates unit tests — built with LangGraph, MCP, and Llama 3.1.
 
-Built by Jay.
+Built by Jaswant.
 
 ---
 
